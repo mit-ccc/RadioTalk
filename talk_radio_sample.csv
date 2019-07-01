@@ -1,0 +1,51 @@
+"state","idx","callsign","school","format","freq","band","city","has_stream","battleground","cregion","popdensity","employment_to_population_ratio","recent_immigrant_frac","stations_in_city","large_city"
+"OR","KCMD-FM","KCMD","","News/Talk",99.3,"FM","Grants Pass",1,0,"West",15.8451578388467,56.3,0.00975113683298246,8,0
+"CO","KKPC-AM","KKPC","","Public Radio",1230,"AM","Pueblo",1,1,"West",19.6657837582097,63,0.00971981694692044,18,1
+"VA","WCHV-AM","WCHV","","News/Talk",1260,"AM","Charlottesville",1,1,"South",80.7265421054175,60.5,0.0138703078616821,17,1
+"TX","WTAW-AM","WTAW","","News/Talk",1620,"AM","College Station",1,0,"South",39.2242446278158,59.8,0.0167597298035233,9,0
+"IL","WPCD-FM","WPCD","Parkland College","College",88.7,"FM","Champaign",1,0,"Midwest",89.5298171677342,59.7,0.0116056993756525,8,0
+"PA","WNTP-AM","WNTP","","News/Talk",990,"AM","Philadelphia",1,1,"Northeast",110.279842599864,57.8,0.00891736561488546,31,1
+"CO","KRCC-FM","KRCC","Colorado College","Public Radio",91.5,"FM","Colorado Springs",1,1,"West",19.6657837582097,63,0.00971981694692044,14,1
+"NY","WRUR-FM","WRUR","University of Rochester","Public Radio",88.5,"FM","Rochester",1,0,"Northeast",161.180219077972,58.1,0.0215950410442158,23,1
+"MN","KTRF-AM","KTRF","","News/Talk",1230,"AM","Thief River Falls",1,0,"Midwest",26.2770617556926,66,0.0108603326966431,6,0
+"TX","KLVI-AM","KLVI","","News/Talk",560,"AM","Beaumont",1,0,"South",39.2242446278158,59.8,0.0167597298035233,10,0
+"FL","WBOB-AM","WBOB","","Talk",600,"AM","Jacksonville",1,1,"South",141.451482140157,53.1,0.0205838691398841,22,1
+"SC","WVOC-AM","WVOC","","News/Talk",560,"AM","Columbia",1,0,"South",61.3634740614203,54.4,0.00524366331378088,15,1
+"CT","WESU-FM","WESU","Wesleyan University","Public Radio",88.1,"FM","Middletown",1,0,"Northeast",286.495136341891,61.3,0.0154799786932174,3,0
+"NY","WVOX-AM","WVOX","","News/Talk",1460,"AM","New Rochelle",1,0,"Northeast",161.180219077972,58.1,0.0215950410442158,2,0
+"TX","KUT-FM","KUT","University of Texas","Public Radio",90.5,"FM","Austin",1,0,"South",39.2242446278158,59.8,0.0167597298035233,12,1
+"MN","KZSE-FM","KZSE","","Public Radio",91.7,"FM","Rochester",1,0,"Midwest",26.2770617556926,66,0.0108603326966431,13,1
+"NY","WINS-AM","WINS","","News",1010,"AM","New York",1,0,"Northeast",161.180219077972,58.1,0.0215950410442158,36,1
+"PA","WIUP-FM","WIUP","Indiana University of Pennsylvania","College",90.1,"FM","Indiana",1,1,"Northeast",110.279842599864,57.8,0.00891736561488546,5,0
+"DC","WMAL-AM","WMAL","","News/Talk",630,"AM","Washington",1,0,"South",4098,61.8,0.0245334247641641,20,1
+"AZ","KEVT-AM","KEVT","","Talk",1210,"AM","Sahuarita",1,1,"West",22.5756967033415,54,0.0126552109568186,1,0
+"SD","KOTA-AM","KOTA","","News/Talk",1380,"AM","Rapid City",1,0,"Midwest",4.2943213649096,65.5,0.00659163415125891,17,1
+"VA","WHKT-AM","WHKT","","Talk",1650,"AM","Portsmouth",1,1,"South",80.7265421054175,60.5,0.0138703078616821,5,0
+"SC","WLTR-FM","WLTR","","Public Radio",91.3,"FM","Columbia",1,0,"South",61.3634740614203,54.4,0.00524366331378088,15,1
+"NY","WAMC-FM","WAMC","","Public Radio",90.3,"FM","Albany",1,0,"Northeast",161.180219077972,58.1,0.0215950410442158,11,1
+"OH","WKBN-AM","WKBN","","News/Talk",570,"AM","Youngstown",1,1,"Midwest",109.383788942539,58.1,0.00658061086334225,8,0
+"ID","KRFA-FM","KRFA","Washington State University","Public Radio",91.7,"FM","Moscow",1,0,"West",7.55236982877432,58.1,0.00684731096590449,5,0
+"WI","WTMJ-AM","WTMJ","","News/Talk",620,"AM","Milwaukee",1,1,"Midwest",40.9367567798785,62.9,0.00564425977387782,23,1
+"OH","WRDL-FM","WRDL","Ashland University","College",88.9,"FM","Ashland",1,1,"Midwest",109.383788942539,58.1,0.00658061086334225,3,0
+"NV","KUNR-FM","KUNR","University of Nevada, Reno","Public Radio",88.7,"FM","Reno",1,1,"West",9.84284568743581,57.3,0.0131885675736323,16,1
+"TX","KTDH-FM","KTDH","","Public Radio",89.3,"FM","Dalhart",1,0,"South",39.2242446278158,59.8,0.0167597298035233,4,0
+"FL","WUSF-FM","WUSF","University of South Florida","Public Radio",89.7,"FM","Tampa",1,1,"South",141.451482140157,53.1,0.0205838691398841,12,1
+"CA","KPRL-AM","KPRL","","News/Talk",1230,"AM","Paso Robles",1,0,"West",95.2285050041391,56.9,0.0183786333597283,4,0
+"FL","WHPT-FM","WHPT","","Talk",102.5,"FM","Sarasota",1,1,"South",141.451482140157,53.1,0.0205838691398841,10,0
+"CA","KQED-FM","KQED","","Public Radio",88.5,"FM","San Francisco",1,0,"West",95.2285050041391,56.9,0.0183786333597283,32,1
+"AL","WACV-FM","WACV","","News/Talk",93.1,"FM","Coosada",1,0,"South",36.8268900900351,52.6,0.00463749994824681,1,0
+"OH","WCPN-FM","WCPN","","Public Radio",90.3,"FM","Cleveland",1,1,"Midwest",109.383788942539,58.1,0.00658061086334225,21,1
+"AZ","KZZZ-AM","KZZZ","","News/Talk",1490,"AM","Bullhead City",1,1,"West",22.5756967033415,54,0.0126552109568186,4,0
+"VA","WVRU-FM","WVRU","Radford University","Public Radio",89.9,"FM","Radford",1,1,"South",80.7265421054175,60.5,0.0138703078616821,3,0
+"WA","KWSU-AM","KWSU","Washington State University","Public Radio",1250,"AM","Pullman",1,0,"West",40.5850835758981,58.5,0.0150322154691514,8,0
+"NY","WNYC-AM","WNYC","","Public Radio",820,"AM","New York",1,0,"Northeast",161.180219077972,58.1,0.0215950410442158,36,1
+"PA","WVYA-FM","WVYA","","Public Radio",89.7,"FM","Williamsport",1,1,"Northeast",110.279842599864,57.8,0.00891736561488546,11,1
+"MO","KTRS-AM","KTRS","","Talk",550,"AM","Saint Louis",1,0,"West",33.9555605481914,58.5,0.00593520943361021,20,1
+"NH","WEVN-FM","WEVN","","Public Radio",90.7,"FM","Keene",1,1,"Northeast",57.1096303963428,64.3,0.00721340642394923,7,0
+"CT","WSNG-AM","WSNG","","Talk",610,"AM","Torrington",1,0,"Northeast",286.495136341891,61.3,0.0154799786932174,2,0
+"PA","WRLC-FM","WRLC","Lycoming College","College",91.7,"FM","Williamsport",1,1,"Northeast",110.279842599864,57.8,0.00891736561488546,11,1
+"CA","KFMB-AM","KFMB","","News/Talk",760,"AM","San Diego",1,0,"West",95.2285050041391,56.9,0.0183786333597283,20,1
+"CO","KCSJ-AM","KCSJ","","News/Talk",590,"AM","Pueblo",1,1,"West",19.6657837582097,63,0.00971981694692044,18,1
+"MI","WWJ-AM","WWJ","","News",950,"AM","Detroit",1,1,"Midwest",67.610687335678,55.2,0.00911230271466161,24,1
+"FL","WJCT-FM","WJCT","","Public Radio",89.9,"FM","Jacksonville",1,1,"South",141.451482140157,53.1,0.0205838691398841,22,1
+"CO","KENC-FM","KENC","","Public Radio",90.7,"FM","Estes Park",1,1,"West",19.6657837582097,63,0.00971981694692044,3,0
