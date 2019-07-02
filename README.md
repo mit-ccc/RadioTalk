@@ -1,6 +1,4 @@
 # RadioTalk
-The RadioTalk dataset of talk radio transcripts
-
 This repository contains supplementary information for the paper "RadioTalk: a large-scale corpus of talk radio transcripts," forthcoming at Interspeech 2019.
 
 # Data location and access
@@ -8,38 +6,48 @@ The corpus as documented in the paper is available in the S3 bucket `radio-talk`
 
 # Data description
 The RadioTalk corpus is in JSONL format, with one json document per line. Each line represents one "snippet" of audio, may contain multiple sentences, and is represented as a dictionary object with the following keys:
+* `content`: The transcribed speech from the snippet.
+* `callsign`: The call letters of the station the snippet aired on.
+* `city`: The city the station is based in, as in FCCC filings.
+* `state`: The state the station is based in, as in FCCC filings.
+* `show_name`: The name of the show containing this snippet.
+* `signature`: The initial 8 bytes of an MD5 hash of the `content` field, after lowercasing and removing English stopwords (specifically the NLTK stopword list), intended to help with deduplication.
+* `studio_or_telephone`: A flag for whether the underlying audio came from a telephone or studio audio equipment. (The most useful feature in distinguishing these is the [narrow frequency range](https://en.wikipedia.org/wiki/Plain_old_telephone_service#Characteristics) of telephone audio.)
+* `guessed_gender`: The imputed speaker gender.
+* `segment_start_time`: The Unix timestamp of the beginning of the underlying audio.
+* `segment_end_time`: The Unix timestamp of the end of the underlying audio.
+* `speaker_id`: A diarization ID for the person speaking in the audio snippet.
+* `audio_chunk_id`: An ID for the audio chunk this snippet came from (each chunk may be split into multiple snippets).
 
-    * `content`: The transcribed speech from the snippet.
-    * `callsign`: The call letters of the station the snippet aired on.
-    * `city`: The city the station is based in, as in FCCC filings.
-    * `state`: The state the station is based in, as in FCCC filings.
-    * `show_name`: The name of the show containing this snippet.
-    * `signature`: The initial 8 bytes of an MD5 hash of the `content` field, after lowercasing and removing English stopwords (specifically the NLTK stopword list), intended to help with deduplication.
-    * `studio_or_telephone`: A flag for whether the underlying audio came from a telephone or studio audio equipment. (The most useful feature in distinguishing these is the [narrow frequency range](https://en.wikipedia.org/wiki/Plain_old_telephone_service#Characteristics) of telephone audio.)
-    * `guessed_gender`: The imputed speaker gender.
-    * `segment_start_time`: The Unix timestamp of the beginning of the underlying audio.
-    * `segment_end_time`: The Unix timestamp of the end of the underlying audio.
-    * `speaker_id`: A diarization ID for the person speaking in the audio snippet.
-    * `audio_chunk_id`: An ID for the audio chunk this snippet came from (each chunk may be split into multiple snippets).
-
-An example snippet from the corpus:
+An example snippet from the corpus (originally on one line but pretty-printed here for readability):
 ```
-{"content": "This would be used for housing programs and you talked a little bit about how the attorney", "callsign": "KABC", "city": "Los Angeles", "state": "CA", "show_name": "The Drive Home With Jillian Barberie & John Phillips", "signature": "afd7d2ee", "studio_or_telephone": "T", "guessed_gender": "F", "segment_start_time": 1540945402.6, "segment_end_time": 1540945408.6, "speaker_id": "S0", "audio_chunk_id": "2018-10-31/KABC/00_20_28/16"}
+{
+    "content": "This would be used for housing programs and you talked a little bit about how the attorney",
+    "callsign": "KABC",
+    "city": "Los Angeles",
+    "state": "CA",
+    "show_name": "The Drive Home With Jillian Barberie & John Phillips",
+    "signature": "afd7d2ee",
+    "studio_or_telephone": "T",
+    "guessed_gender": "F",
+    "segment_start_time": 1540945402.6,
+    "segment_end_time": 1540945408.6,
+    "speaker_id": "S0",
+    "audio_chunk_id": "2018-10-31/KABC/00_20_28/16"
+}
 ```
 
 # Initial station sample
 The initial set of 50 radio stations for ingestion was chosen from the universe of all 1,912 talk radio stations as follows. First, we excluded certain stations from consideration:
-
-    * stations without an online stream of their broadcasts,
-    * stations in Alaska or Hawaii, and
-    * the recently licensed category of "low-power FM stations".
+* stations without an online stream of their broadcasts,
+* stations in Alaska or Hawaii, and
+* the recently licensed category of "low-power FM stations".
 
 Next, we took a random sample of 50 stations from the remaining 1,842, stratifying by four variables:
-
-    * Radio band (AM or FM),
-    * Four-way Census region (Midwest, Northeast, South, West),
-    * Whether there were at least 10 stations listed in that station's city, as a proxy for population density, and
-    * Whether the station was in a battleground state for the 2016 presidential election. Battleground states for our purposes were NV, AZ, CO, IA, WI, MI, OH, PA, VA, NC, FL, NH.
+* Radio band (AM or FM),
+* Four-way Census region (Midwest, Northeast, South, West) based on the containing state,
+* Whether there were at least 10 stations listed in that station's city, as a proxy for population density, and
+* Whether the station was in a battleground state for the 2016 presidential election. Battleground states for our purposes were NV, AZ, CO, IA, WI, MI, OH, PA, VA, NC, FL, NH.
 
 This sample was intended to be nationally representative and to permit weighting summary estimates back to the population of radio stations along these four variables. Note that some (8 as of June 2019) of the selected stations have either ceased airing a talk format or no longer offer an online stream of their broadcasts, and are thus not included in the later parts of the corpus.
 
