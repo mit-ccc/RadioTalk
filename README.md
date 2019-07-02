@@ -8,6 +8,7 @@ The corpus as documented in the paper is available in the S3 bucket `radio-talk`
 
 # Data description
 The RadioTalk corpus is in JSONL format, with one json document per line. Each line represents one "snippet" of audio, may contain multiple sentences, and is represented as a dictionary object with the following keys:
+
     * `content`: The transcribed speech from the snippet.
     * `callsign`: The call letters of the station the snippet aired on.
     * `city`: The city the station is based in, as in FCCC filings.
@@ -28,11 +29,13 @@ An example snippet from the corpus:
 
 # Initial station sample
 The initial set of 50 radio stations for ingestion was chosen from the universe of all 1,912 talk radio stations as follows. First, we excluded certain stations from consideration:
+
     * stations without an online stream of their broadcasts,
     * stations in Alaska or Hawaii, and
     * the recently licensed category of "low-power FM stations".
 
 Next, we took a random sample of 50 stations from the remaining 1,842, stratifying by four variables:
+
     * Radio band (AM or FM),
     * Four-way Census region (Midwest, Northeast, South, West),
     * Whether there were at least 10 stations listed in that station's city, as a proxy for population density, and
