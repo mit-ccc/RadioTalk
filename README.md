@@ -4,7 +4,7 @@ The RadioTalk dataset of talk radio transcripts
 This repository contains supplementary information for the paper "RadioTalk: a large-scale corpus of talk radio transcripts," forthcoming at Interspeech 2019.
 
 # Data location and access
-The corpus as documented in the paper is available in the [S3 bucket `radio-talk`](s3://radio-talk/v1/). The entire corpus is available as [one file](s3://radio-talk/v1/radiotalk.json.gz) of about 9.3 GB, as well as a version with [one file per month](s3://radio-talk/v1/monthly/). Any future versions will be released under other `vX` prefixes for suitable values of `X`.
+The corpus as documented in the paper is available in the S3 bucket `radio-talk` at `s3://radio-talk/v1/`. The entire corpus is available as one file of about 9.3 GB at `s3://radio-talk/v1/radiotalk.json.gz`, and there's also a version with one file per month under `s3://radio-talk/v1/monthly/`. Any future versions will be released under other `vX` prefixes for suitable values of `X`.
 
 # Initial station sample
 The initial set of 50 radio stations for ingestion was chosen from the universe of all 1,912 talk radio stations as follows. First, we excluded certain stations from consideration:
