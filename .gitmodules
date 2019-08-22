@@ -1,0 +1,3 @@
+[submodule "nlp-benchmarks"]
+	path = nlp-benchmarks
+	url = git@github.com:wwbrannon/nlp-benchmarks.git
