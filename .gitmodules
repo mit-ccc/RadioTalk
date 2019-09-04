@@ -1,3 +1,3 @@
 [submodule "nlp-benchmarks"]
-	path = nlp-benchmarks
+	path = word2vec/nlp-benchmarks
 	url = git@github.com:wwbrannon/nlp-benchmarks.git
