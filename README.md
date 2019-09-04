@@ -37,6 +37,20 @@ An example snippet from the corpus (originally on one line but pretty-printed he
 }
 ```
 
+# Pre-trained word embeddings
+A word embedding model trained on the RadioTalk data, in the format produced by [gensim](https://radimrehurek.com/gensim/models/word2vec.html), is also available in the bucket, at `s3://radio-talk/v1.0/word2vec/`. The embeddings are 300-dimensional and were trained with the skip-gram with negative sampling variant of Word2Vec (see [Mikolov et al 2013](https://arxiv.org/abs/1301.3781)).
+
+Besides doing the usual preprocessing -- conversion to lowercase, removing punctuation, etc -- we also concatenated common phrases into single tokens with words separated by underscores  before training the embeddings. (Specifically, the list of phrases to combined included the titles of English Wikipedia articles, a list of phrases [detected](https://radimrehurek.com/gensim/models/phrases.html) from the corpus, and the names of certain political figures.) Counting these combined collocations as single terms, the model vocabulary contains 53,968 terms.
+
+For reproducibility, the gensim model object was initialized with the following non-default parameters:
+    * size = 300
+    * sg = 1
+    * hs = 0
+    * negative = 10
+    * window = 8
+    * min\_count = 25
+    * workers = 4
+
 # Initial station sample
 The initial set of 50 radio stations for ingestion was chosen from the universe of all 1,912 talk radio stations as follows. First, we excluded certain stations from consideration:
 * stations without an online stream of their broadcasts,
