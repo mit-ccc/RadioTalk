@@ -1,5 +1,5 @@
 # RadioTalk
-This repository contains supplementary information for the paper "RadioTalk: a large-scale corpus of talk radio transcripts," forthcoming at Interspeech 2019.
+This repository contains supplementary information for the paper ["RadioTalk: a large-scale corpus of talk radio transcripts"](https://arxiv.org/abs/1907.07073), forthcoming at Interspeech 2019.
 
 # Data location and access
 The corpus as documented in the paper is available in the S3 bucket `radio-talk` at `s3://radio-talk/v1.0/`. The entire corpus is available as one file of about 9.3 GB at `s3://radio-talk/v1.0/radiotalk.json.gz`, and there's also a version with one file per month under `s3://radio-talk/v1.0/monthly/`. [Pre-trained word embeddings](#pre-trained-word-embeddings) are also available. Any future versions will be released under other `vX.Y` prefixes for suitable values of `X` and `Y`.
