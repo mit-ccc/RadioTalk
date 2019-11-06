@@ -55,7 +55,7 @@ For reproducibility, the gensim model object was initialized with the following 
 # Kaldi model
 As discussed in the paper, to transcribe radio speech we started with the [JHU ASpIRE speech-to-text model](https://kaldi-asr.org/models/m1) and
 replaced its language model with one trained on the transcripts of various radio programs.  Our final Kaldi model files
-(which can be used as drop-in replacements in the s5 recipe linked above) can be downloaded from
+(which can be used as drop-in replacements for the outputs of the recipe linked above) can be downloaded from
 `s3://radio-talk/v1.0/models/radiotalk_kaldi_model_20191106.tgz`  (Note:  1.9 GB compressed, 4.8 GB uncompressed)
 
 # Initial station sample
