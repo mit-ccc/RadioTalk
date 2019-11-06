@@ -40,6 +40,12 @@ An example snippet from the corpus (originally on one line but pretty-printed he
 # Pre-trained word embeddings
 A word embedding model trained on the RadioTalk data, in the format produced by [gensim](https://radimrehurek.com/gensim/models/word2vec.html), is also available in the bucket, at `s3://radio-talk/v1.0/word2vec/`. The embeddings are 300-dimensional and were trained with the skip-gram with negative sampling variant of Word2Vec (see [Mikolov et al 2013](https://arxiv.org/abs/1301.3781)). See also our [evaluation](word2vec/word2vec-eval.ipynb) of these embeddings on some standard analogy and similarity tasks.
 
+# Kaldi model
+As discussed in the paper, we started with the [ASpIRE speech-to-text model][https://kaldi-asr.org/models/m1] and
+replaced the language model with one trained on the transcripts of various radio programs.  Our Kaldi model files
+(which can be used as drop-in replacements in the s5 recipe linked above) can be downloaded from
+`s3://radio-talk/v1.0/models/radiotalk_kaldi_model_20191106.tgz`  (Note:  1.9 GB compressed, 4.8 GB uncompressed)
+
 ## Word embedding details
 Besides doing the usual preprocessing -- conversion to lowercase, removing punctuation, etc -- we also concatenated common phrases into single tokens with words separated by underscores  before training the embeddings. (Specifically, the list of phrases to combined included the titles of English Wikipedia articles, a list of phrases [detected](https://radimrehurek.com/gensim/models/phrases.html) from the corpus, and the names of certain political figures.) Counting these combined collocations as single terms, the model vocabulary contains 53,968 terms.
 
@@ -67,4 +73,7 @@ Next, we took a random sample of 50 stations from the remaining 1,842, stratifyi
 This sample was intended to be nationally representative and to permit weighting summary estimates back to the population of radio stations along these four variables. Note that some (8 as of June 2019) of the selected stations have either ceased airing a talk format or no longer offer an online stream of their broadcasts, and are thus not included in the later parts of the corpus.
 
 The list of these initial stations is included in the file `talk_radio_sample.csv`.
+
+# Demo
+This interface lets you listen to a sample of radio clips restricted to the topic and U.S. state of your choosing:   https://radio.cortico.ai/
 
